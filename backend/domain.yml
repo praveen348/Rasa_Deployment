@@ -1,3 +1,5 @@
+version: "2.0"
+
 intents:
   - greet
   - goodbye
@@ -6,30 +8,159 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-
-actions:
-  - action_hello_world
+  - branch_locator
+  - loan_types
+  - loan_education_about
+  - loan_education_interest_rate
+  - loan_education_documents_required
+  - loan_education_time_required
+  - loan_education_term_period
+  - loan_education_max_amount
+  - loan_education_min_amount
+  - loan_education_processing_fees
+  - loan_education_courses_covered
+  - loan_education_approved_universities
+  - loan_education_security
+  - loan_home_about
+  - loan_home_interest_rate
+  - loan_home_documents_required
+  - loan_home_time_required
+  - loan_home_term_period
+  - loan_home_max_amount
+  - loan_home_min_amount
+  - loan_personal_about
+  - loan_personal_interest_rate
+  - loan_personal_documents_required
+  - loan_personal_time_required
+  - loan_personal_term_period
+  - loan_personal_max_amount
+  - loan_personal_min_amount
   
+
 responses:
+  utter_welcome:
+   - text: 
+       "Welcome to ABC Bank. I am Aksa an AI assistant, Are you looking for any Loans?"
+
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: Hey!
+    - text: Hello.
+    - text: Heya!
+    - text: Hi.
+
+
+  utter_loan_types:
+    - text:
+        "We provide education loan, home loan, and personal loans, what kind of loan are you looking for?"
+
+  utter_loan_education_about:
+    - text:
+        "An education loan is designed to financially aid the applicant in affording
+        the cost of education."
+
+  utter_loan_education_time_required:
+    - text: 
+         "Education loans are sanctioned within 2-3 working business days."
+  utter_loan_education_term_period:
+    - text: The loan tenure for education loan is 15 years.
+  utter_loan_education_max_amount:
+    - text: The maximum amount for education loan is up to 1.5 crore.
+  utter_loan_education_min_amount:
+    - text: The minimum amount for education loan is Rs. 50,000.
+
+  utter_loan_education_interest_rate:
+    - text: The interest rate for education loan ranges from 8.45% to 15.2% pa.
+
+  utter_loan_education_documents_required:
+    - text:
+         "we would be needing Id prrof, Income proof, address proof, Education proof, Photos of applicant."
+  utter_loan_education_processing_fees:
+    - text:
+        "we won't be charging anything upto loan amount Rs. 20 Lakhs, beyond 20 lakks we charge Rs. 15000 "
+
+  utter_loan_education_courses_covered:
+    - text:
+         "we provide loans to all courses Conducted By Colleges/Universities Approved By UGC/AICTE/IMC/GOVT."
+    
+  utter_loan_education_approved_universities:
+    - text:
+        "These are the approved universities in India: IITs, IIMs, BITS Pilani,\
+        \ NITs, IIITs and other Ivy League institutes.\nThese are the approved universities\
+        \ abroad: MIT, Oxford, UTA and other institutes."
+
+  utter_loan_education_security:
+    - text:
+        "For Loan security, You can provide 
+        Mortgage of premises or Mortgage of flat, an Insurance policy or even Shares
+         of listed companies regularly traded in Stock Exchange."
+
+  utter_loan_home_about:
+    - text:
+        "An home loan is designed to financially aid the applicant in affording the
+        cost of home."
+  utter_loan_home_interest_rate:
+    - text: The current interest rate for home loan ranges from 8.40% to 8.50% pa.
+  utter_loan_home_documents_required:
+    - text:
+        "we would be needing Id prrof, Income proof, address proof, Education proof, Photos of applicant."
+  utter_loan_home_time_required:
+    - text: Home loans are sanctioned within 2-3 working business days.
+  utter_loan_home_term_period:
+    - text: The loan tenure for home loan is 5 to 30 years.
+  utter_loan_home_max_amount:
+    - text: The maximum amount for home loan is up to 5 crore.
+  utter_loan_home_min_amount:
+    - text: The minimum amount for home loan is Rs. 30 lakhs.
+  utter_loan_personal_about:
+    - text:
+       " An personal loan is designed to financially aid the applicant for non-general
+        personal purposes."
+  utter_loan_personal_interest_rate:
+    - text: The interest rate for personal loan ranges from 10.75% to 21.5% pa.
+  utter_loan_personal_documents_required:
+    - text:
+        "we would be needing Id prrof, Income proof, address proof, Education proof, Photos of applicant."
+  utter_loan_personal_time_required:
+    - text: Personal loans are sanctioned within 48 working business hours.
+  utter_loan_personal_term_period:
+    - text: The loan tenure for personal loan is 5 years.
+  utter_loan_personal_max_amount:
+    - text: The maximum amount for personal loan is up to 1 crore.
+  utter_loan_personal_min_amount:
+    - text: The minimum amount for personal loan is Rs. 1,000.    
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: 
+      "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: 
+      "Did this information help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: 
+      "Great, let me know if you want to know more information on other loans we provide"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: 
+      "Bye, hope to serve you again"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: 
+      "I am a bot, powered by Rasa."
+
+  utter_thanks:
+    - text: 
+        "Thanks"
+
+  utter_branch_locator:
+  - text: "Click [here](https://www.npci.org.in/atm/locator/demo) to visit the ATM
+        locator web page."
+
+
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
